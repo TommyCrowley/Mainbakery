@@ -5,6 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch Delivery",
+            "request": "launch",
+            "mainClass": "Delivery",
+            "projectName": "Mainbakery_5c177f23"
+        },
+        {
+            "type": "java",
+            "name": "Launch Inventory",
+            "request": "launch",
+            "mainClass": "Inventory",
+            "projectName": "Mainbakery_5c177f23"
+        },
+        {
             "name": "Java",
             "type": "java",
             "request": "launch",

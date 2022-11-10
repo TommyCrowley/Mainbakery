@@ -1,3 +1,3 @@
-public class payment {
+public class Payment extends Orders {
 
 }

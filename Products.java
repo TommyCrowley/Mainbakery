@@ -1,3 +1,3 @@
-public class Products {
+public class Products extends Orders {
 
 }
