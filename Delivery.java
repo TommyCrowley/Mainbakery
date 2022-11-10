@@ -1,17 +1,15 @@
 public class Delivery extends Orders {
-    float standard_fee;
-    float base_fee;
+    static float standard_fee = 0.2f;
+    static int base_fee = 2;
 
-    public static void main(String[] args) {
-
-        System.out.println(Account.name);
-        System.out.println(Account.address);
-        System.out.println(Account.email);
-        Account.change_details("name", "callum");
-        Account.change_details("address", "123 drive");
-        Account.change_details("email", "Test@gmail.com");
-        System.out.println(Account.name);
-        System.out.println(Account.address);
-        System.out.println(Account.email);
+    static float get_distance(float x) {
+        return x;
     }
+
+    static int calculate_delivery_cost(int x) {
+        float distance = get_distance(5.0f);
+        int cost = Math.round(distance * standard_fee) + base_fee;
+        return cost;
+    }
+
 }
