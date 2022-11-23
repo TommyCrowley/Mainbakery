@@ -2,7 +2,7 @@ package factoryClass;
 
 public class cake implements productType{
     @Override
-    public void draw(){
-        System.out.println("Inside cake :: create() method");
+    public void create(){
+        System.out.println("Inside cake :: draw() method");
     }
 }

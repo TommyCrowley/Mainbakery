@@ -6,7 +6,11 @@ public class productFactory {
         }
         if(x.equalsIgnoreCase("CAKE")) {
             if (x.equalsIgnoreCase("CHOC")) {
-                return new cake();
+                return (productType) new chocCake();
+            }
+        } else if (x.equalsIgnoreCase("PASTRY")) {
+            if(x.equalsIgnoreCase("CROISSANT")){
+                return (productType) new croissant();
             }
         }
         return null;
