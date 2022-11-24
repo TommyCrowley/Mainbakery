@@ -1,45 +1,45 @@
-import java.util.List;
 import java.util.ArrayList;
 
-public class Orders extends Main {
-    static String current_cart;
+import factoryClass.productFactory;
+import factoryClass.productType;
 
-    static String current_order(String x) {
-        return x;
+public class Order {
+    ArrayList<productType> products = new ArrayList<productType>();
+    // add database
+    static String accountname = "TestUser";
+    static String address = "testplace";
+    Boolean delivered = false;
+    Boolean paid = false;
+
+    public String getOrder(String orderId){
+        String output;
+
+        for (productType product : products) {
+            output = output + product.toString();
+        }
+
+        return("current order = " + output);
+
     }
 
-    static String past_orders(String x) {
-        return x;
+    public String addOrder(productType newProd){
+        try{
+            products.add(newProd);
+            return newProd.toString();
+        }
+        catch(Exception e){
+            return ("could not add :" + newProd.toString());
+        }
     }
 
-    static String make_order(String x) {
-        return x;
-    }
+    public String getAccountName(){
 
-    static boolean cancel_order(boolean x) {
-        return x;
     }
+    public String getAddress(){
 
-    static float net_price(float x) {
-        return x;
     }
+    public boolean getdelivered(){
 
-    static int delivery_charge(int x) {
-        return x;
-    }
-
-    public static void main(String[] args) {
-        List<String> current_cart = new ArrayList<String>();
-        current_cart.add("1");
-        System.out.println(Account.name);
-        System.out.println(Account.address);
-        System.out.println(Account.email);
-        Account.change_details("name", "callum");
-        Account.change_details("address", "123 drive");
-        Account.change_details("email", "Test@gmail.com");
-        System.out.println(Account.name);
-        System.out.println(Account.address);
-        System.out.println(Account.email);
     }
 
 }
