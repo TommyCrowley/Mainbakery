@@ -1,21 +1,17 @@
-import java.util.List;
-import java.util.ArrayList;
 import java.util.Scanner;
 
+import Discounts.BaseDiscount;
+import Discounts.Discount;
+import Discounts.TwoYearDiscount;
+import factoryClass.chocCake;
+import factoryClass.pastry;
+public class Main extends LogIn {
+    public static void main(String[] args) {
 
-public class Main {
-    public static void main(String[] args) 
-    {
-        List<String> current_cart = new ArrayList<String>();
-        current_cart.add("1");
-
-        Login Startup = new Login();
-        System.out.println(Account.name);
-        System.out.println(Account.password);
-        Startup.login();
-
+        Discount test = new TwoYearDiscount(new BaseDiscount());
+        System.out.println(test.getDescription());
+        login();
         Controller();
-
 
     }
 
@@ -54,7 +50,8 @@ public class Main {
             else if(input.toLowerCase().equals("orders")){
 
             }
-            else if(input.toLowerCase().equals("products")) {
+            else if(input.toLowerCase().equals("test")) {
+                Discount testDiscount = new TwoYearDiscount(new BaseDiscount());
 
             }
             else if(input.toLowerCase().equals("quit")){

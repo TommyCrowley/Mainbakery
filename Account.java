@@ -1,25 +1,28 @@
-import Discounts.BaseDiscount;
-public class Account extends BaseDiscount{
+import javax.swing.DefaultBoundedRangeModel;
+
+public class Account extends Delivery {
     // add database
-    static String name = "TestUser";
+    static String name = "Callum";
     static String address = "testplace";
     static String email = "bob@gmail";
-    static String password = "TestPassword";
-    static Boolean is_staff = true;
+    static String password = "Test"
+    static Boolean is_staff;
 
     static void change_details(String x, String y) {
-        if (x.equals("name")) {
+        switch(x){
+        case "name":
             name = y;
-        } else if (x.equals("address")) {
+            break;
+        case "address":
             address = y;
-        } else if (x.equals("email"))  {
+            break;
+        case "email":
             email = y;
-        } else if (x.equals("password"))  {
-            password = y; 
+            break;
+        case "password":
+            password = y;
+        default:
+            System.out.println("Error invalid input");
         }
-        else{
-            System.out.print("error change details incorrect input");
-        }
-
     }
 }
