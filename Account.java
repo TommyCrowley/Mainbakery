@@ -5,11 +5,11 @@ public class Account extends Delivery {
     static String name = "Callum";
     static String address = "testplace";
     static String email = "bob@gmail";
-    static String password = "Test"
+    static String password = "Test";
     static Boolean is_staff;
 
     static void change_details(String x, String y) {
-        switch(x){
+        switch(x.toLowerCase()){
         case "name":
             name = y;
             break;

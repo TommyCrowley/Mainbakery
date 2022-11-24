@@ -7,12 +7,8 @@ import factoryClass.chocCake;
 import factoryClass.pastry;
 public class Main extends LogIn {
     public static void main(String[] args) {
-
-        Discount test = new TwoYearDiscount(new BaseDiscount());
-        System.out.println(test.getDescription());
         login();
         Controller();
-
     }
 
     public static void Controller()
@@ -52,6 +48,8 @@ public class Main extends LogIn {
             }
             else if(input.toLowerCase().equals("test")) {
                 Discount testDiscount = new TwoYearDiscount(new BaseDiscount());
+                System.out.println(testDiscount.getDescription());
+                System.out.println(testDiscount.GetDiscount());
 
             }
             else if(input.toLowerCase().equals("quit")){
