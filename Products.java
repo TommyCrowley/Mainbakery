@@ -1,4 +1,4 @@
-public class Products extends Orders {
+public class Products extends Order {
     static String product_list;
 
     static String available_products(String x) {
