@@ -1,8 +1,8 @@
 package factoryClass;
 
-public class chocCake implements cakeType{
+public class carrotCake implements productType{
     @Override
-    public void cakeType(){
+    public void create(){
         System.out.println("inside carrot cake::cakeType() method");
     }
 }
