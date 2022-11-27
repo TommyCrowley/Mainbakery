@@ -3,8 +3,7 @@ import java.util.Scanner;
 import Discounts.BaseDiscount;
 import Discounts.Discount;
 import Discounts.TwoYearDiscount;
-import factoryClass.chocCake;
-import factoryClass.pastry;
+
 public class Main extends LogIn {
     public static void main(String[] args) {
         login();
