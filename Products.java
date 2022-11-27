@@ -9,7 +9,7 @@ public class Products extends Order {
         return x;
     }
 
-    static String product_price(String x) {
+    static int product_price(int x) {
         return x;
     }
 }
